@@ -3,13 +3,14 @@
 #include <byteswap.h>
 
 uint32_t swap_byte(uint32_t n) {
+	
     uint32_t result = bswap_32(n);
     return result;
 }
 
 
 uint32_t read_byte(const char* filename) {
-
+	
 	FILE* file = fopen(filename, "rb");
 
 	if (file == NULL) {
