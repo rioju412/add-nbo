@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdint.h>
-#include <byteswap.h>
+#include <netinet/in.h>
 
 uint32_t swap_byte(uint32_t n) {
 	
-    uint32_t result = bswap_32(n);
+    uint32_t result = ntohl(n);
     return result;
 }
 
